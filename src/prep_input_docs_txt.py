@@ -4,7 +4,7 @@ documents in /input_docs_txt/ into a single document, then
 separating this into chunks 
 
 Script usage:
-    $ python src/prep_input_docs_txt.py
+    $ python -m src.prep_input_docs_txt
 """
 
 import json
@@ -12,14 +12,12 @@ import pathlib
 import pickle
 import re
 import warnings
-from collections import namedtuple
 from typing import Final
+
+from src.objects import Chunk, ChunkMetadata
 
 MAX_CHUNK_NCHARS: Final[int] = 500  # longer chunks are discarded
 OUTPUT_FILEPATH: Final[str] = "./prepped_input_data.pickle"
-
-Chunk = namedtuple("Chunk", "text metadata")
-ChunkMetadata = namedtuple("ChunkMetadata", "source_name")
 
 chunk_counts: dict[str, int] = {}
 

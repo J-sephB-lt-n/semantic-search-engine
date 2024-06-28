@@ -162,3 +162,4 @@ cython_debug/
 #.idea/
 
 gitignore_dir/
+prepped_input_data.pickle
