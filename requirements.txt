@@ -1,1 +1,1 @@
-# pip install pymilvus sentence-transformers tqdm
+# pip install lancedb sentence-transformers tqdm
