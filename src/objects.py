@@ -1,4 +1,3 @@
 from collections import namedtuple
 
-Chunk = namedtuple("Chunk", "text metadata")
-ChunkMetadata = namedtuple("ChunkMetadata", "source_name")
+Chunk = namedtuple("Chunk", "text start_index end_index metadata")
