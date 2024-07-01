@@ -14,3 +14,13 @@ Note about cached huggingface models: the following opens up a UI for deleting m
 pip install huggingface_hub[cli]
 huggingface-cli delete-cache
 ```
+
+# TODO
+
+- Investigate different chunking strategies
+
+- Investigate ANN, indexing, distnace metrics etc. in lancedb
+
+- Investigate different chunking strategies
+
+- Implement batch data insert into semantic database
