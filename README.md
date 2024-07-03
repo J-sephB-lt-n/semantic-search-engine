@@ -4,6 +4,9 @@ Tool for searching for passages within a document
 
 ```bash
 pdftotext TheEffectiveExecutive.pdf input_docs/TheEffectiveExecutive.txt
+python -m steps.chunk_input # input written to /chunked_input/
+python -m observe.chunk_stats.py
+python -m observe.view_chunks.py --chunkfile "chunked_input/" --chunknums="TODO"
 ```
 
 <https://huggingface.co/Alibaba-NLP/gte-large-en-v1.5>
