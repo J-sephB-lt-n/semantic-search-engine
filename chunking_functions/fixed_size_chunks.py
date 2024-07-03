@@ -11,6 +11,11 @@ def chunk_by_fixed_size(
     """Chunks (splits) `input_text` into chunks of size `chunk_nchar`, optionally with
     content overlap of `overlap_nchar` characters between the chunks
 
+    Args:
+        input_text (str): The text to split into chunks
+        chunk_nchar (int): How many characters go into each chunk
+        overlap_nchar (int): How many characters in common between successive chunks
+
     Returns:
         tuple[Chunk, ...]: a tuple of Chunk objects
     """
