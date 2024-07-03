@@ -26,7 +26,7 @@ def chunk_by_fixed_size(
                     end_index=chunk_end_index,
                 )
             )
-            current_index += chunk_nchar
+            current_index += chunk_nchar - overlap_nchar
         else:
             chunk_end_index = len(input_text) - 1
             chunks.append(
