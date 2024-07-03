@@ -29,7 +29,7 @@ for path in pathlib.Path("./input_docs_txt").iterdir():
             "n_chunks_discarded": 0,
         }
         with open(path, "r", encoding="utf-8") as file:
-            all_text: str = file.read()[2000:]
+            all_text: str = file.read()
             for chunk in all_text.split("."):
                 chunk_counts[path.name]["n_chunks_total"] += 1
                 chunk = re.sub(r"\s+", " ", chunk.strip())

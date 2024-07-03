@@ -161,6 +161,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-gitignore_dir/
+chunked_input/
 databases/
-prepped_input_data.pickle
+gitignore_dir/
