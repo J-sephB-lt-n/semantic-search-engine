@@ -1,3 +1,4 @@
+import itertools
 import re
 
 from objects import Chunk
@@ -20,6 +21,7 @@ def chunk_by_paragraph(
         tuple[Chunk, ...]: A tuple of Chunk objects
     """
     chunks: list[Chunk] = []
+    chunk_counter = itertools.count()
     paragraph_breaks_found: list[tuple[int, int]] = (
         # including document start and end at paragraph breaks #
         [(0, 0)]
@@ -45,6 +47,8 @@ def chunk_by_paragraph(
                     text=input_text[parag_start:parag_end],
                     start_index=parag_start,
                     end_index=parag_end,
+                    chunk_num=next(chunk_counter),
+                    metadata=None,
                 )
             )
 

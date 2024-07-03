@@ -2,6 +2,7 @@
 Defines function for splitting text into chunks of fixed size (with optional overlap) 
 """
 
+import itertools
 from objects import Chunk
 
 
@@ -21,6 +22,7 @@ def chunk_by_fixed_size(
     """
     chunks: list[Chunk] = []
     current_index: int = 0
+    chunk_counter = itertools.count()
     while True:
         chunk_end_index = current_index + chunk_nchar - 1
         if chunk_end_index <= len(input_text):
@@ -29,6 +31,8 @@ def chunk_by_fixed_size(
                     text=input_text[current_index : chunk_end_index + 1],
                     start_index=current_index,
                     end_index=chunk_end_index,
+                    chunk_num=next(chunk_counter),
+                    metadata=None,
                 )
             )
             current_index += chunk_nchar - overlap_nchar
@@ -39,6 +43,8 @@ def chunk_by_fixed_size(
                     text=input_text[current_index : chunk_end_index + 1],
                     start_index=current_index,
                     end_index=chunk_end_index,
+                    chunk_num=next(chunk_counter),
+                    metadata=None,
                 )
             )
             break
