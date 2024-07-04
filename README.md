@@ -7,6 +7,7 @@ pdftotext TheEffectiveExecutive.pdf input_docs/TheEffectiveExecutive.txt
 python -m steps.chunk_input # input written to /chunked_input/
 python -m observe.chunk_stats.py
 python -m observe.view_random_chunks 0
+python -m steps.create_lance_db
 
 ```
 
