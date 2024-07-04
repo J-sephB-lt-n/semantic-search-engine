@@ -6,7 +6,7 @@ Tool for searching for passages within a document
 pdftotext TheEffectiveExecutive.pdf input_docs/TheEffectiveExecutive.txt
 python -m steps.chunk_input # input written to /chunked_input/
 python -m observe.chunk_stats.py
-python -m observe.view_random_chunks --chunk_file "chunked_input/chunk_by_fixed_size-chunk_nchar100-overlap_nchar20.pickle"
+python -m observe.view_random_chunks 0
 
 ```
 

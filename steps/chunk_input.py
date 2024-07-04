@@ -33,6 +33,7 @@ for chunker in (
         "func": chunk_by_fixed_size,
         "params": {"chunk_nchar": 100, "overlap_nchar": 20},
     },
+    {"func": chunk_by_paragraph, "params": {"min_chunk_nchar": 50}},
 ):
     chunks: list[Chunk] = []
     for doc_name, text in input_docs.items():
