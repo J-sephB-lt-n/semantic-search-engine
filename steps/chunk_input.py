@@ -28,12 +28,12 @@ for path in pathlib.Path(INPUT_DIRPATH).iterdir():
             input_docs[path.name] = file.read()
 
 for chunker in (
-    {"func": chunk_by_fixed_size, "params": {"chunk_nchar": 100, "overlap_nchar": 0}},
+    {"func": chunk_by_fixed_size, "params": {"chunk_nchar": 500, "overlap_nchar": 0}},
     {
         "func": chunk_by_fixed_size,
-        "params": {"chunk_nchar": 100, "overlap_nchar": 20},
+        "params": {"chunk_nchar": 500, "overlap_nchar": 100},
     },
-    {"func": chunk_by_paragraph, "params": {"min_chunk_nchar": 50}},
+    # {"func": chunk_by_paragraph, "params": {"min_chunk_nchar": 50}},
 ):
     chunks: list[Chunk] = []
     for doc_name, text in input_docs.items():
