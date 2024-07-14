@@ -1,5 +1,7 @@
 # semantic-search-engine
 
+I'm abandoning this repo in order to pursue this one instead: <https://github.com/J-sephB-lt-n/happy-rag-friends>
+
 Tool for searching for passages within a document
 
 ```bash
